@@ -124,12 +124,12 @@ const EDIT_USER = async (req, res) => {
     try {
         const user = await userModel.findById({ _id: req.params.id })
         if (user) {
-                user.name = req.body.name
-                user.email = req.body.email
-                user.mobile = req.body.mobile
-                user.desingnation = req.body.desingnation
-                user.gender = req.body.gender
-                user.Course = req.body.Course
+            user.name = req.body.name
+            user.email = req.body.email
+            user.mobile = req.body.mobile
+            user.desingnation = req.body.desingnation
+            user.gender = req.body.gender
+            user.Course = req.body.Course
             await user.save()
             res.status(200).send({
                 message: "USER DATA ADDED SUCESSFULL"
